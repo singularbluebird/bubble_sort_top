@@ -10,13 +10,13 @@ def bubble_sort(arr)
     end
     i += 1
     if i == arr.length - 1 && sorted_arr.length != goal_len
-      sorted_arr << arr[i]
+      sorted_arr.unshift(arr[i])
       arr.pop
       i = 0
     end
   end
-  sorted_arr << arr[0]
-  sorted_arr.reverse
+  sorted_arr.unshift(arr.first) 
+  sorted_arr
 end
 
 sorted_arr = bubble_sort([4,3,78,2,0,2])
